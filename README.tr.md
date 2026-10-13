@@ -1,5 +1,7 @@
 # LIDAR Tabanlı Otonom Mobil Robot Şarj İstasyonu Tespiti
 
+[🇬🇧 English](README.md) | [🇹🇷 Türkçe](README.tr.md)
+
 Bu çalışma, 2B LIDAR sensöründen elde edilen TOML formatındaki tarama verilerini ayrıştıran, ortamdaki doğrusal sınırları ardışık RANSAC ve Temel Bileşen Analizi (PCA) yöntemleriyle modelleyen, $\ge 60^\circ$ geometrik köşe kesişimlerini belirleyerek mobil robot ile şarj istasyonu arasındaki bağıl konumu hesaplayan ve sonuçları Gnuplot üzerinden görselleştiren bir C uygulamasıdır.
 
 ---

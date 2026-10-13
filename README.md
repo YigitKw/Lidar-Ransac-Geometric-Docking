@@ -1,5 +1,7 @@
 # 2D LIDAR-Based Autonomous Mobile Robot Docking Station Detection
 
+[🇬🇧 English](README.md) | [🇹🇷 Türkçe](README.tr.md)
+
 This repository provides a C application that processes 2D LIDAR scan data (in TOML format) to detect planar walls using sequential RANSAC and Principal Component Analysis (PCA), computes docking station corner apex coordinates ($\ge 60^\circ$ / $90^\circ$), and visualizes the robot's relative pose and range using Gnuplot.
 
 ---
