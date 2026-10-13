@@ -1,0 +1,19 @@
+# Build artifacts
+bin/Debug/*.exe
+obj/
+*.o
+*.exe
+*.a
+
+# Code::Blocks IDE
+*.depend
+*.layout
+
+# Runtime generated / temp files
+*.dat
+downloaded_*.toml
+
+# OS metadata
+desktop.ini
+Thumbs.db
+.DS_Store
