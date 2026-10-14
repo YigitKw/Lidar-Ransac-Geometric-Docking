@@ -96,7 +96,9 @@ When the visualization window opens, it is maximized automatically without block
 | Key / Control | Action | Purpose |
 | :--- | :--- | :--- |
 | **Arrow Keys** ($\leftarrow, \rightarrow, \uparrow, \downarrow$) | Pan | Translates the isometric viewport in any direction across the point cloud. |
-| **Mouse Wheel** | Zoom | Dynamically magnifies or demagnifies the map around the cursor. |
+| **Ctrl + Mouse Wheel** | Cursor Zoom | Dynamically magnifies or demagnifies the map centered at the mouse cursor. |
+| **`+` / `-` Keys** *(or `z` / `x`)* | Key Zoom | Zooms in or out incrementally without holding modifier keys. |
+| **Right-Click Drag** | Box Zoom | Draws a rectangular bounding box to magnify any specific region immediately. |
 | **`a` Key** | Autoscale / Reset | Toggles autoscale to immediately restore default framing, centering the robot and all walls if the viewport is lost. |
 
 These hotkeys are printed directly as an on-screen subtitle below the chart header and echoed in the terminal pause prompt. Pressing `Enter` in the console closes the plot and exits cleanly.

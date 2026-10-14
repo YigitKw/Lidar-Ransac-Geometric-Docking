@@ -936,13 +936,14 @@ void renderVisualizationWithGnuplot(Point *laserPoints, int totalPoints, Line *d
     fprintf(gnuplotPipeHandle, "set object 999 rectangle from screen 0,0 to screen 1,1 fillcolor rgb 'white' fillstyle solid 1.0 noborder behind\n");
     fprintf(gnuplotPipeHandle, "set datafile separator ' '\nset decimalsign '.'\n");
     fprintf(gnuplotPipeHandle, "set grid lc rgb '#dddddd' lw 1\nset key outside right top font ',9'\nset xlabel 'X (m)'\nset ylabel 'Y (m)'\n");
+    fprintf(gnuplotPipeHandle, "bind 'z' 'builtin-zoom-in'\nbind 'x' 'builtin-zoom-out'\n");
     if (isEnglish)
     {
-        fprintf(gnuplotPipeHandle, "set title \"LIDAR RANSAC Line Detection and Docking\\n{/*0.85 {/:Italic [Arrow Keys]: Pan  |  [Mouse Wheel]: Zoom  |  [a] Key: Reset / Fit All}}\"\n");
+        fprintf(gnuplotPipeHandle, "set title \"LIDAR RANSAC Line Detection and Docking\\n{/*0.85 {/:Italic [Arrow Keys]: Pan  |  [Ctrl + Wheel] / [+/-]: Zoom  |  [a] Key: Reset / Fit All}}\"\n");
     }
     else
     {
-        fprintf(gnuplotPipeHandle, "set title \"LIDAR RANSAC Doğru Tespiti ve Şarj İstasyonu Kesişimi\\n{/*0.85 {/:Italic [Yön Tuşları]: Gezin / Kaydır  |  [Fare Tekerleği]: Yakınlaştır  |  [a] Tuşu: Merkeze Dön / Sığdır}}\"\n");
+        fprintf(gnuplotPipeHandle, "set title \"LIDAR RANSAC Doğru Tespiti ve Şarj İstasyonu Kesişimi\\n{/*0.85 {/:Italic [Yön Tuşları]: Gezin / Kaydır  |  [Ctrl + Tekerlek] / [+/-]: Yakınlaştır  |  [a] Tuşu: Merkeze Dön / Sığdır}}\"\n");
     }
 
     fprintf(gnuplotPipeHandle, "set style textbox 1 opaque fillcolor rgb '#fff176' border lc rgb '#f57f17' lw 2\n");
@@ -1082,8 +1083,8 @@ void renderVisualizationWithGnuplot(Point *laserPoints, int totalPoints, Line *d
     fprintf(gnuplotPipeHandle, "\n");
 
     fprintf(gnuplotPipeHandle, "pause -1 \"%s\\n\"\n",
-            isEnglish ? "Press Enter to close plot... (Navigation: Arrow Keys = Pan, Mouse Wheel = Zoom, 'a' = Reset/Fit)"
-                      : "Grafiği kapatmak için Enter'a basın... (Gezinme: Yön Tuşları = Kaydır, Fare Tekerleği = Yakınlaştır, 'a' = Sıfırla/Ortala)");
+            isEnglish ? "Press Enter to close plot... (Navigation: Arrow Keys = Pan, Ctrl+Wheel or +/- = Zoom, 'a' = Reset/Fit)"
+                      : "Grafiği kapatmak için Enter'a basın... (Gezinme: Yön Tuşları = Kaydır, Ctrl+Tekerlek veya +/- = Yakınlaştır, 'a' = Sıfırla/Ortala)");
     fflush(gnuplotPipeHandle);
     pclose(gnuplotPipeHandle);
 }

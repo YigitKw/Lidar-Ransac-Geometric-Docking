@@ -89,7 +89,7 @@ TOML dosya adı, dosya yolu veya URL girin ya da sürükleyip bırakın: [ENTER 
 RANSAC 8 doğrusal segment buldu.
 Açısı >= 60 derece olan 1 şarj kesişimi bulundu:
 Kesişim 1 (d6 & d7): (-1.287, 1.369) mesafe=1.88m açı=89.8 derece
-Grafiği kapatmak için Enter'a basın... (Gezinme: Yön Tuşları = Kaydır, Fare Tekerleği = Yakınlaştır, 'a' = Sıfırla/Ortala)
+Grafiği kapatmak için Enter'a basın... (Gezinme: Yön Tuşları = Kaydır, Ctrl+Tekerlek veya +/- = Yakınlaştır, 'a' = Sıfırla/Ortala)
 ```
 
 ### Etkileşimli Grafik Gezinme Kontrolleri (Gnuplot):
@@ -99,7 +99,9 @@ Görselleştirme penceresi masaüstü odağını engellemeden tam ekran boyutund
 | Kontrol / Tuş | İşlev | Tanım |
 | :--- | :--- | :--- |
 | **Yön Tuşları** ($\leftarrow, \rightarrow, \uparrow, \downarrow$) | Gezinme (Pan) | İzometrik düzlemde kadrajı istenen yöne doğru kaydırır. |
-| **Fare Tekerleği** | Yakınlaştırma (Zoom) | Nokta bulutunu imlecin bulunduğu konuma göre büyütür veya küçültür. |
+| **Ctrl + Fare Tekerleği** | İmleç Odaklı Yakınlaştırma (Zoom) | İmlecin bulunduğu noktayı merkeze alarak dinamik büyütme ve küçültme yapar. |
+| **`+` / `-` Tuşları** *(veya `z` / `x`)* | Tek Tuşla Yakınlaştırma | Herhangi bir yardımcı tuşa basmadan doğrudan kademeli yakınlaşıp uzaklaşır. |
+| **Sağ Tıkla Sürükleme** | Kutu Yakınlaştırma (Box Zoom) | Seçilen dikdörtgen alanı anında ekrana sığdıracak şekilde büyütür. |
 | **`a` Tuşu** | Otomatik Ölçekleme (Autoscale) | Görünümü sıfırlayarak tüm noktaları, duvarları ve robotu kadraja sığdıracak şekilde yeniden ortalar. |
 
 Bu yönlendirmeler grafik başlığının hemen altına alt başlık olarak yazdırılır ve konsol isteminde hatırlatılır. Konsolda `Enter` tuşuna basıldığında grafik kapatılır ve program sonlanır.
