@@ -89,6 +89,10 @@ Int 1 (d6 & d7): (-1.287, 1.369) dist=1.88m angle=89.8 deg
 Press Enter to close plot... (Navigation: Arrow Keys = Pan, Ctrl+Wheel = Zoom, 'a' = 1:1 Reset)
 ```
 
+### Visualization Output (Gnuplot)
+
+![2D LIDAR RANSAC Line Detection and Docking Visualization](docs/images/visualization_en.png)
+
 ### Interactive Visualization Navigation (Gnuplot)
 
 When the visualization window opens, it is maximized automatically while preserving window focus and desktop switching. The Gnuplot `wxt` environment provides real-time keyboard and mouse controls:
@@ -199,6 +203,10 @@ Proje1/
 ├── .gitignore                # Git exclusion list
 ├── README.md                 # English technical documentation
 ├── README.tr.md              # Turkish technical documentation
+├── docs/
+│   └── images/               # Documentation visual assets
+│       ├── visualization_en.png
+│       └── visualization_tr.png
 └── Lidar/
     ├── main.c                # Implementation (parser, geometry, RANSAC, visualization)
     ├── Proje.cbp             # Code::Blocks project file

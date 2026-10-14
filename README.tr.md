@@ -92,6 +92,10 @@ Kesişim 1 (d6 & d7): (-1.287, 1.369) mesafe=1.88m açı=89.8 derece
 Grafiği kapatmak için Enter'a basın... (Gezinme: Yön Tuşları = Kaydır, Ctrl+Tekerlek = Yakınlaştır, 'a' = 1:1 Sıfırla)
 ```
 
+### Görselleştirme Çıktısı (Gnuplot)
+
+![2B LIDAR RANSAC Doğru Tespiti ve Şarj İstasyonu Haritası](docs/images/visualization_tr.png)
+
 ### Etkileşimli Grafik Gezinme Kontrolleri (Gnuplot)
 
 Görselleştirme penceresi masaüstü odağını engellemeden tam ekran boyutunda açılır. Gnuplot `wxt` arayüzü kullanıcıya şu etkileşimli kontrol mekanizmalarını sunar:
@@ -203,6 +207,10 @@ Proje1/
 ├── .gitignore                # Git izleme dışı dosya yapılandırması
 ├── README.md                 # İngilizce teknik dokümantasyon
 ├── README.tr.md              # Türkçe teknik dokümantasyon
+├── docs/
+│   └── images/               # Dokümantasyon görsel varlıkları
+│       ├── visualization_en.png
+│       └── visualization_tr.png
 └── Lidar/
     ├── main.c                # Algoritmik boru hattı ve görselleştirme kodu
     ├── Proje.cbp             # Code::Blocks proje yönetim dosyası
