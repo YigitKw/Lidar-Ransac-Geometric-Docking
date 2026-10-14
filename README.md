@@ -86,22 +86,27 @@ Enter TOML file name, path, URL, or drag and drop: [ENTER = default]
 RANSAC extracted 8 linear segments.
 Found 1 docking intersections with angle >= 60 deg:
 Int 1 (d6 & d7): (-1.287, 1.369) dist=1.88m angle=89.8 deg
-Press Enter to close plot... (Navigation: Arrow Keys = Pan, Mouse Wheel = Zoom, 'a' = Reset/Fit)
+Press Enter to close plot... (Navigation: Arrow Keys = Pan, Ctrl+Wheel = Zoom, 'a' = 1:1 Reset)
 ```
 
-### Interactive Visualization Navigation (Gnuplot):
+### Interactive Visualization Navigation (Gnuplot)
 
-When the visualization window opens, it is maximized automatically without blocking desktop switching or window focus. The interface provides built-in keyboard and mouse navigation:
+When the visualization window opens, it is maximized automatically while preserving window focus and desktop switching. The Gnuplot `wxt` environment provides real-time keyboard and mouse controls:
 
-| Key / Control | Action | Purpose |
+| Input / Shortcut | Action | Description |
 | :--- | :--- | :--- |
-| **Arrow Keys** ($\leftarrow, \rightarrow, \uparrow, \downarrow$) | Pan | Translates the isometric viewport in any direction across the point cloud. |
-| **Ctrl + Mouse Wheel** | Cursor Zoom | Dynamically magnifies or demagnifies the map centered at the mouse cursor. |
-| **Right-Click Drag** | Box Zoom | Draws a rectangular bounding box to inspect any specific region in close-up detail. |
-| **Toolbar Zoom Icons** | Toolbar Zoom | The magnifying glass buttons (+ and -) on the top-left toolbar zoom in and out. |
-| **`a` Key** | 1:1 Autoscale Reset | Restores the default 1:1 isometric metric framing, centering the robot and all walls. |
+| **Arrow Keys** ($\leftarrow, \rightarrow, \uparrow, \downarrow$) | Viewport Pan | Translates the isometric viewing plane across the scan environment. |
+| **Mouse Wheel / Trackpad Scroll** | Vertical Pan | Scrolls the viewport along the Y-axis. Horizontal trackpad scrolling delegates to the host OS driver settings. |
+| **Ctrl + Mouse Wheel** | Cursor Zoom | Dynamically magnifies or demagnifies the point cloud centered at the mouse cursor. |
+| **Right-Click Drag** | Box Zoom | Draws a rectangular bounding box to inspect local features (e.g. corner apex or wall inliers) in close-up detail. |
+| **`1` and `2` Keys** | Coordinate Format | Cycles the bottom-left cursor readout between Cartesian $(x, y)$, Polar $(r, \theta)$, and auxiliary formats. |
+| **`p` and `n` Keys** | Zoom History | Steps backward (`p`) and forward (`n`) through the viewport zoom history stack. |
+| **`a` Key** | 1:1 Autoscale Reset | Restores the default 1:1 metric aspect ratio (`size ratio -1`), re-centering the robot, scan points, and docking walls. |
 
-These hotkeys are printed directly as an on-screen subtitle below the chart header and echoed in the terminal pause prompt. Pressing `Enter` in the console closes the plot and exits cleanly.
+#### Toolbar and Operating System Interaction:
+- **Top-Left Toolbar:** Houses quick actions for clipboard copy, image export, zoom history back/forward (magnifiers with blue and green arrows), and autoscale reset (magnifier with red plot curve). The metric grid is enabled by default (`#dddddd`) for coordinate readability.
+- **Trackpad Scrolling Direction:** In Windows, two-finger horizontal trackpad gestures follow the system configuration (*Settings > Bluetooth & devices > Touchpad > Scrolling direction*).
+- **Console Exit:** These shortcut hints are printed below the plot header and echoed in the terminal pause prompt. Pressing `Enter` in the console closes the visualization and terminates the process cleanly.
 
 ---
 

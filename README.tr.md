@@ -89,22 +89,27 @@ TOML dosya adı, dosya yolu veya URL girin ya da sürükleyip bırakın: [ENTER 
 RANSAC 8 doğrusal segment buldu.
 Açısı >= 60 derece olan 1 şarj kesişimi bulundu:
 Kesişim 1 (d6 & d7): (-1.287, 1.369) mesafe=1.88m açı=89.8 derece
-Grafiği kapatmak için Enter'a basın... (Gezinme: Yön Tuşları = Kaydır, Ctrl+Tekerlek veya +/- = Yakınlaştır, 'a' = Sıfırla/Ortala)
+Grafiği kapatmak için Enter'a basın... (Gezinme: Yön Tuşları = Kaydır, Ctrl+Tekerlek = Yakınlaştır, 'a' = 1:1 Sıfırla)
 ```
 
-### Etkileşimli Grafik Gezinme Kontrolleri (Gnuplot):
+### Etkileşimli Grafik Gezinme Kontrolleri (Gnuplot)
 
-Görselleştirme penceresi masaüstü odağını engellemeden tam ekran boyutunda açılır. Kullanıcı aşağıdaki kontrollerle harita üzerinde serbestçe gezinebilir:
+Görselleştirme penceresi masaüstü odağını engellemeden tam ekran boyutunda açılır. Gnuplot `wxt` arayüzü kullanıcıya şu etkileşimli kontrol mekanizmalarını sunar:
 
-| Kontrol / Tuş | İşlev | Tanım |
+| Kontrol / Kısayol | İşlev | Tanım |
 | :--- | :--- | :--- |
 | **Yön Tuşları** ($\leftarrow, \rightarrow, \uparrow, \downarrow$) | Gezinme (Pan) | İzometrik düzlemde kadrajı istenen yöne doğru kaydırır. |
-| **Ctrl + Fare Tekerleği** | İmleç Odaklı Yakınlaştırma (Zoom) | İmlecin bulunduğu noktayı merkeze alarak dinamik büyütme ve küçültme yapar. |
-| **Sağ Tıkla Sürükleme** | Kutu Yakınlaştırma (Box Zoom) | Seçilen dikdörtgen alanı yakından incelemek için ekrana büyütür. |
-| **Araç Çubuğu Büyüteçleri** | Butonla Yakınlaştırma | Pencerenin sol üstündeki büyüteç simgeleri (+ ve -) ile yakınlaşıp uzaklaşılır. |
-| **`a` Tuşu** | 1:1 Ölçeğe Dönüş / Sıfırla | Görünümü sıfırlayarak tüm noktaları, duvarları ve robotu 1:1 izometrik kare kadraja geri kilitler. |
+| **Fare Tekerleği / Dokunmatik Yüzey** | Dikey Kaydırma | Kadrajı Y ekseni boyunca kaydırır. İki parmakla yatay kaydırma yönü işletim sistemi sürücü ayarlarına bağlıdır. |
+| **Ctrl + Fare Tekerleği** | İmleç Odaklı Yakınlaştırma (Zoom) | İmlecin bulunduğu noktayı merkeze alarak dinamik büyütme ve küçültme uygular. |
+| **Sağ Tıkla Sürükleme** | Kutu Yakınlaştırma (Box Zoom) | Seçilen dikdörtgen alanı (örneğin köşe kesişim noktası veya inlier noktaları) yakından incelemek için büyütür. |
+| **`1` ve `2` Tuşları** | Koordinat Formatı Değiştirme | Sol alt köşedeki imleç koordinat gösterimini Kartezyen $(x, y)$, Kutupsal $(r, \theta)$ ve yardımcı formatlar arasında döngüye sokar. |
+| **`p` ve `n` Tuşları** | Zoom Geçmişi | Yakınlaştırma geçmişinde bir önceki (`p`) veya bir sonraki (`n`) adıma geçiş yapar. |
+| **`a` Tuşu** | 1:1 Ölçeğe Dönüş / Sıfırla | Görünümü sıfırlayarak tüm noktaları, duvarları ve robotu 1:1 izometrik kare kadraja (`size ratio -1`) geri kilitler. |
 
-Bu yönlendirmeler grafik başlığının hemen altına alt başlık olarak yazdırılır ve konsol isteminde hatırlatılır. Konsolda `Enter` tuşuna basıldığında grafik kapatılır ve program sonlanır.
+#### Araç Çubuğu ve Donanım Etkileşimi:
+- **Sol Üst Araç Çubuğu (Toolbar):** Panoya kopyalama, görsel dışa aktarma, zoom geçmişi ileri/geri alma (mavi ve yeşil oklu büyüteçler) ve görünüm sıfırlama (kırmızı eğrili büyüteç) simgelerini içerir. Koordinat ızgarası okunabilirlik için varsayılan olarak açık gelir (`#dddddd`).
+- **Dokunmatik Yüzey (Touchpad) Yönü:** Windows üzerinde iki parmakla yatay kaydırma yönü, sistemin genel dokunmatik yüzey sürücü yapılandırmasına (*Ayarlar > Bluetooth ve Cihazlar > Dokunmatik Yüzey > Kaydırma Yönü*) göre belirlenir.
+- **Konsol Kapanışı:** Temel yönlendirmeler grafik başlığının hemen altına alt başlık olarak yazdırılır ve konsol isteminde hatırlatılır. Konsolda `Enter` tuşuna basıldığında grafik kapatılır ve program güvenle sonlanır.
 
 ---
 
