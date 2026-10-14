@@ -100,9 +100,9 @@ Görselleştirme penceresi masaüstü odağını engellemeden tam ekran boyutund
 | :--- | :--- | :--- |
 | **Yön Tuşları** ($\leftarrow, \rightarrow, \uparrow, \downarrow$) | Gezinme (Pan) | İzometrik düzlemde kadrajı istenen yöne doğru kaydırır. |
 | **Ctrl + Fare Tekerleği** | İmleç Odaklı Yakınlaştırma (Zoom) | İmlecin bulunduğu noktayı merkeze alarak dinamik büyütme ve küçültme yapar. |
-| **`+` / `-` Tuşları** *(veya `z` / `x`)* | Tek Tuşla Yakınlaştırma | Herhangi bir yardımcı tuşa basmadan doğrudan kademeli yakınlaşıp uzaklaşır. |
-| **Sağ Tıkla Sürükleme** | Kutu Yakınlaştırma (Box Zoom) | Seçilen dikdörtgen alanı anında ekrana sığdıracak şekilde büyütür. |
-| **`a` Tuşu** | Otomatik Ölçekleme (Autoscale) | Görünümü sıfırlayarak tüm noktaları, duvarları ve robotu kadraja sığdıracak şekilde yeniden ortalar. |
+| **Sağ Tıkla Sürükleme** | Kutu Yakınlaştırma (Box Zoom) | Seçilen dikdörtgen alanı yakından incelemek için ekrana büyütür. |
+| **Araç Çubuğu Büyüteçleri** | Butonla Yakınlaştırma | Pencerenin sol üstündeki büyüteç simgeleri (+ ve -) ile yakınlaşıp uzaklaşılır. |
+| **`a` Tuşu** | 1:1 Ölçeğe Dönüş / Sıfırla | Görünümü sıfırlayarak tüm noktaları, duvarları ve robotu 1:1 izometrik kare kadraja geri kilitler. |
 
 Bu yönlendirmeler grafik başlığının hemen altına alt başlık olarak yazdırılır ve konsol isteminde hatırlatılır. Konsolda `Enter` tuşuna basıldığında grafik kapatılır ve program sonlanır.
 
