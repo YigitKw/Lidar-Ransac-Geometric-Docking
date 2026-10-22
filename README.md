@@ -201,6 +201,7 @@ $$\text{Total Space Complexity} = \mathcal{O}(N)$$
 ```
 Proje1/
 ├── .gitignore                # Git exclusion list
+├── LICENSE                   # MIT License
 ├── README.md                 # English technical documentation
 ├── README.tr.md              # Turkish technical documentation
 ├── docs/
@@ -219,3 +220,9 @@ Proje1/
             ├── Proje.exe     # Compiled executable
             └── libcurl-x64.dll # Runtime library for network requests
 ```
+
+---
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

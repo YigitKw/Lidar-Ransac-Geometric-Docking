@@ -205,6 +205,7 @@ $$\text{Toplam Alan Karmaşıklığı} = \mathcal{O}(N)$$
 ```
 Proje1/
 ├── .gitignore                # Git izleme dışı dosya yapılandırması
+├── LICENSE                   # MIT Lisansı
 ├── README.md                 # İngilizce teknik dokümantasyon
 ├── README.tr.md              # Türkçe teknik dokümantasyon
 ├── docs/
@@ -223,3 +224,9 @@ Proje1/
             ├── Proje.exe     # Derlenmiş ikili dosya
             └── libcurl-x64.dll # Ağ istekleri için çalışma zamanı dinamik kütüphanesi
 ```
+
+---
+
+## Lisans
+
+Bu proje MIT Lisansı altında lisanslanmıştır - ayrıntılar için [LICENSE](LICENSE) dosyasına bakınız.
